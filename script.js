@@ -119,8 +119,14 @@ const changeMode = (value) => {
     // screen.style.backgroundColor = 'black'
     if (mode === 'RGB') {
         hex.innerHTML = `rgb(${red.value},${green.value},${blue.value})`
+        redHead.innerHTML = 'Red'
+        greenHead.innerHTML = 'Green'
+        blueHead.innerHTML = 'Blue'
     } else if (mode === 'HEX') {
         hex.innerHTML = `#${toHex(red.value)}${toHex(green.value)}${toHex(blue.value)}`
+        redHead.innerHTML = 'Red'
+        greenHead.innerHTML = 'Green'
+        blueHead.innerHTML = 'Blue'
     } else if(mode === 'HSL') {
         hex.innerHTML = `hsl(${red.value},${green.value}%,${blue.value}%)`
         redHead.innerHTML = 'Hue'
@@ -130,6 +136,9 @@ const changeMode = (value) => {
         opacity.style.display = 'flex'
         opacityHead.style.display = 'flex'
         hex.innerHTML = `rgba(${red.value},${green.value}%,${blue.value}%, ${opacity.value})`
+        redHead.innerHTML = 'Red'
+        greenHead.innerHTML = 'Green'
+        blueHead.innerHTML = 'Blue'
     } else if (mode === 'HSLA'){
         opacity.style.display = 'flex'
         opacityHead.style.display = 'flex'
