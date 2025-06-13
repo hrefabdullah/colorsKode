@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color palette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="screen">
+        <div class="logo">
+            <img src="logo.png" width="40" alt="">
+            <h1>ColorsKode</h1>
+        </div>
+        
+        <div id="controller">
+            <h1 id="hex">#000000</h1>
+            <h1 id="redHead">Red</h1>
+            <input type="range" min="0" value="0" max="255" id="redRange">
+            <h1 id="greenHead">Green</h1>
+            <input type="range" min="0" value="0" max="255" id="greenRange">
+            <h1 id="blueHead">Blue</h1>
+            <input type="range" min="0" value="0" max="255" id="blueRange">
+            <h1 id="opacityHead">Opacity</h1>
+            <input type="range" id="opacity" min="0" max="1" step="0.1" value="1">
+            <button id="randomColor" onclick="randomColor()">Random</button>
+        </div>
+
+        <div class="others">
+            <label for="mode">Color Mode : </label>
+            <button id="mode" class="mode" onclick="dropDown()"></button>
+            <div class="colorDropDown" >
+                <button onclick="changeMode('HEX')">HEX</button>
+                <button onclick="changeMode('RGB')">RGB</button>
+                <button onclick="changeMode('HSL')">HSL</button>
+                <button onclick="changeMode('RGBA')">RGBA</button>
+                <button onclick="changeMode('HSLA')">HSLA</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
